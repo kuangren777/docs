@@ -1,20 +1,27 @@
 ---
-title: "产品介绍"
-description: "AIHubMix 由美国 AIHubMix, LLC 主体运营，是获得微软 Azure、AWS、GCP 、阿里云、百度云等各大模型推理云厂商官方授权的合规模型聚合平台。所有服务全部集群化部署云美国谷歌云上，长期为众多知名应用提供高并发、稳定、可信赖的 AI 模型 API 服务，深受开发者和企业信任。"
+title: "CaMeL AI"
+description: "独创智能缓存分组技术，正版高质量模型转发，让顶级模型也能跑出白菜价"
 ---
 
-> AIHubMix 由美国 AIHubMix, LLC 主体运营，是获得微软 Azure、AWS、GCP 、阿里云、百度云等各大模型推理云厂商官方授权的合规模型聚合平台。所有服务全部集群化部署云美国谷歌云上，长期为众多知名应用提供高并发、稳定、可信赖的 AI 模型 API 服务，深受开发者和企业信任。
+> 某高校博士团队研发与运营，通过独创的智能缓存分组技术 SmartCache，让 Claude Code、对话等场景都能享受到缓存带来的显著降本。
 
-## 概述
+## 为什么选择 CaMeL AI？
 
-* **统一接口，极简迁移**：所有模型统一支持 OpenAI chat 兼容接口，代码零改动即可平滑切换。
-* **多接口兼容**：支持 OpenAI、Google Gemini、Anthropic多种兼容格式接口
-* **一站式模型能力**：文本、图片/视频生成、向量嵌入、Rerank、TTS、STT、OCR 等主流模型全覆盖，满足多场景需求。
-* **灵活计费，按量付费**：无会员、无包月，计费规则完全跟对应厂商对齐一致。
+* **独创智能缓存分组技术**：哪怕你用的不是官方 Claude Code，而是第三方开源工具/IDE，我们也能通过算法大幅提升缓存命中率。命中缓存后，Opus 4.6 等顶级模型一次调用可能只要几分钱。
+* **拒绝低智模型**：只做正版高质量模型转发，一次跑通省下的时间远比低价渠道反复 Debug 划算。
+* **科研级信誉**：多家科研院所、高校实验室稳定使用，支持开具正规发票（普票/专票），支持对公。
+* **灵活计费**：无会员、无包月，按量付费，计费规则与官方对齐。
 
 <Card title="快速开始" icon="rocket" color="#000" href="/quick-start">
   一个接口把所有 AI 模型统一接入你的应用
 </Card>
+
+## 分组说明
+
+| 分组 | 适用场景 | 说明 |
+|------|---------|------|
+| **default** | Claude Code 等自带缓存管理的应用 | 高可用组，满血 Max 渠道 |
+| **smartcache** | Cherry Studio / OpenClaw 等不自带缓存管理的应用 | 独创智能缓存分组，大幅提升命中率 |
 
 ## 文档结构
 
@@ -54,7 +61,7 @@ description: "AIHubMix 由美国 AIHubMix, LLC 主体运营，是获得微软 Az
 
 <Columns cols={2}>
   <Card title="第三方接入指南" icon="book" color="#000" href="/api/Auth">
-    在三方应用中集成 AIHubMix API
+    在三方应用中集成 CaMeL AI API
   </Card>
 
   <Card title="FAQs" icon="search" color="#000" href="/FAQs/Faq">
@@ -64,15 +71,15 @@ description: "AIHubMix 由美国 AIHubMix, LLC 主体运营，是获得微软 Az
 
 ## 常用功能与场景
 
-* **开发工具：** 在 [Claude Code](/api/Claude-Code)、[OpenCode](/api/Opencode)、[Cline](/api/Cline)、[Gemini Cli ](/api/Cline)等开发工具中使用
+* **开发工具：** 在 [Claude Code](/api/Claude-Code)、[OpenCode](/api/Opencode)、[Cline](/api/Cline)、[Gemini Cli](/api/Gemini-Cli)、[Codex](/api/Codex-CLI) 等开发工具中使用
 * **应用软件：** 在 [Lobe-chat](/clients/Lobe-Chat)、[OpenAI Translator](/clients/OpenAI-Translator)、[Cursor](/clients/Cursor)、[Cherry Studio](/clients/Cherry-Studio)、[ChatBox](/clients/ChatBox) 等软件中使用
 
 ## 快速导航
 
 <AccordionGroup>
   <Accordion title="入门">
-    * [概述](/)- 本页
-    * [快速入门](/quick-start)- 进行首次 API 调用
+    * [概述](/) - 本页
+    * [快速入门](/quick-start) - 进行首次 API 调用
   </Accordion>
 
   <Accordion title="开发工具集成">
@@ -87,8 +94,7 @@ description: "AIHubMix 由美国 AIHubMix, LLC 主体运营，是获得微软 Az
   </Accordion>
 
   <Accordion title="联系我们">
-    * 商务合作：[business@aihubmix.com](mailto:business@aihubmix.com)
-    * 意见反馈：[feedback@aihubmix.com](mailto:feedback@aihubmix.com)
+    * 售后QQ群：1080898797
     * [人工客服](/FAQs/Human-Customer-Support)
   </Accordion>
 </AccordionGroup>

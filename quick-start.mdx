@@ -5,13 +5,13 @@ description: "生成 API 密钥并进行首次调用"
 
 > 生成 API 密钥并进行首次调用
 
-## 直接调用 AIHubMix API
+## 直接调用 CaMeL AI API
 
 <Tip>
-  其中 `<AIHUBMIX_API_KEY>` 替换为 [AIHubMix Key](https://aihubmix.com/token)，注意 `key` 的有效期和额度限制。
+  其中 `<CAMELAI_API_KEY>` 替换为 [CaMeL AI Key](https://camel.kr777.top/token)，注意 `key` 的有效期和额度限制。
 </Tip>
 
-可使用的 `model` 列表，可查阅 [模型广场](https://aihubmix.com/models) ，复制模型名称替换即可。
+可使用的 `model` 列表，可查阅 [模型广场](https://camel.kr777.top/models) ，复制模型名称替换即可。
 
 <CodeGroup>
   ```py Python theme={null}
@@ -21,7 +21,7 @@ description: "生成 API 密钥并进行首次调用"
   response = requests.post(
     url="https://api.kr777.top/chat/completions",
     headers={
-      "Authorization": "Bearer <AIHUBMIX_API_KEY>",
+      "Authorization": "Bearer <CAMELAI_API_KEY>",
       "Content-Type": "application/json",
     },
     data=json.dumps({
@@ -37,11 +37,11 @@ description: "生成 API 密钥并进行首次调用"
   ```
 
   ```typescript Javascript theme={null}
-  // 请在 https://aihubmix.com 域名下尝试，否则有浏览器跨域问题
+  // 请在 https://camel.kr777.top 域名下尝试，否则有浏览器跨域问题
   fetch('https://api.kr777.top/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization: 'Bearer <AIHUBMIX_API_KEY>',
+      Authorization: 'Bearer <CAMELAI_API_KEY>',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
@@ -58,7 +58,7 @@ description: "生成 API 密钥并进行首次调用"
 
   ```Shell Curl theme={null}
   curl 'https://api.kr777.top/chat/completions'
-  -H 'Authorization: Bearer <AIHUBMIX_API_KEY>'
+  -H 'Authorization: Bearer <CAMELAI_API_KEY>'
   -H 'Content-Type: application/json'
   -d '{
      "model": "gpt-4o-mini",
@@ -76,7 +76,7 @@ description: "生成 API 密钥并进行首次调用"
 
 ## 使用 OpenAI SDK
 
-其中 `<AIHUBMIX_API_KEY>` 替换为 [AIhubmix Key](https://aihubmix.com/token)，注意 `key` 的有效期和额度限制。 可使用的 `model` 列表，可查阅 [模型广场](https://aihubmix.com/models) ，复制模型名称替换即可。
+其中 `<CAMELAI_API_KEY>` 替换为 [CaMeL AI Key](https://camel.kr777.top/token)，注意 `key` 的有效期和额度限制。 可使用的 `model` 列表，可查阅 [模型广场](https://camel.kr777.top/models) ，复制模型名称替换即可。
 
 <CodeGroup>
   ```py Python theme={null}
@@ -84,7 +84,7 @@ description: "生成 API 密钥并进行首次调用"
 
   client = OpenAI(
     base_url="https://api.kr777.top",
-    api_key="<AIHUBMIX_API_KEY>",
+    api_key="<CAMELAI_API_KEY>",
   )
 
   completion = client.chat.completions.create(
@@ -115,7 +115,7 @@ description: "生成 API 密钥并进行首次调用"
 
   const openai = new OpenAI({
     baseURL: 'https://api.kr777.top',
-    apiKey: '<AIHUBMIX_API_KEY>',
+    apiKey: '<CAMELAI_API_KEY>',
   });
 
   async function main() {

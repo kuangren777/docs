@@ -1,9 +1,9 @@
 ---
 title: "OpenAI Codex"
-description: "通过 AIHubMix API 使用 Codex"
+description: "通过 CaMeL AI API 使用 Codex"
 ---
 
-> 通过 AIHubMix API 使用 Codex
+> 通过 CaMeL AI API 使用 Codex
 
 ## 安装
 
@@ -24,17 +24,17 @@ npm install -g @openai/codex
 1. 修改 ` ~/.codex/config.toml` 配置文件，增加如下配置：
 
 ```toml  theme={null}
-profile = "aihubmix"
+profile = "camelai"
 
-[model_providers.aihubmix]
-name = "aihubmix"
+[model_providers.camelai]
+name = "camelai"
 base_url = "https://api.kr777.top"
 personality = "pragmatic"
 wire_api = "responses"
 
-[profiles.aihubmix]
+[profiles.camelai]
 model = "gpt-5.2"
-model_provider = "aihubmix"
+model_provider = "camelai"
 model_reasoning_effort = "high"
 ```
 
@@ -42,7 +42,7 @@ model_reasoning_effort = "high"
 
 ```json  theme={null}
 {
-  "OPENAI_API_KEY": "AIHUBMIX_API_KEY"
+  "OPENAI_API_KEY": "CAMELAI_API_KEY"
 }
 ```
 
@@ -52,7 +52,7 @@ model_reasoning_effort = "high"
 
 <img src="https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-1.png?fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=fe138eaf69337380daafce928076cf45" alt="Codex 1" data-og-width="2072" width="2072" data-og-height="1374" height="1374" data-path="public/codex-1.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-1.png?w=280&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=0311ea7ed1540310529bbc7305ec7342 280w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-1.png?w=560&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=2f5c780e3d1b935188178182befb682e 560w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-1.png?w=840&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=064f5aa9012531e7fb3d52f93327f79b 840w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-1.png?w=1100&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=2de92ab2071dc61caee658d312926a0a 1100w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-1.png?w=1650&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=121a5b386cf5e8e1555b739c91692c73 1650w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-1.png?w=2500&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=989dc29d243e7e13652a4ba2e0eccb77 2500w" />
 
-2. 在预设列表中选择「AiHubMix」。
+2. 在预设列表中选择「CaMeL AI」。
 
 <img src="https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-2.png?fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=b8ba865c78af5753e54cccd93f8ad7da" alt="Codex 2" data-og-width="2072" width="2072" data-og-height="1374" height="1374" data-path="public/codex-2.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-2.png?w=280&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=85bf24d7d8244d7ab347645ca5e4ad9a 280w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-2.png?w=560&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=a6be53ea4f0a2ef7b2182095503934c0 560w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-2.png?w=840&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=7e0469421fba3f48027a0d22979e043f 840w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-2.png?w=1100&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=bdd77fa84fdb88ccd6b1eb5b9fb9862a 1100w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-2.png?w=1650&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=b30a51ad9a3b8a6bf752a23613cad71b 1650w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-2.png?w=2500&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=9ef4bbdb07061aa63942cfa2aa969b20 2500w" />
 
@@ -60,7 +60,7 @@ model_reasoning_effort = "high"
 
 <img src="https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-3.png?fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=8bfb58110be1913a35c04b4e24f618c1" alt="Codex 3" data-og-width="2072" width="2072" data-og-height="1374" height="1374" data-path="public/codex-3.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-3.png?w=280&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=a913320a9448536ed04fdcdcbb0a7880 280w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-3.png?w=560&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=f8520abd4157b2b39abf9cfd9cbf8739 560w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-3.png?w=840&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=657f95b9f411fcbf39ab53294038ad3c 840w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-3.png?w=1100&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=75e4c426a22d29aad830892679700a8f 1100w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-3.png?w=1650&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=6db27994805948ef75734e0de9343611 1650w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-3.png?w=2500&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=bd1b78b3dba5c39a55045725e381a7d7 2500w" />
 
-4. 返回首页，在供应商列表中选择「AiHubMix」，点击「启用」即可使用。
+4. 返回首页，在供应商列表中选择「CaMeL AI」，点击「启用」即可使用。
 
 <img src="https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-4.png?fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=58abd6f4edd56d892624269ff54f6079" alt="Codex 4" data-og-width="2072" width="2072" data-og-height="1374" height="1374" data-path="public/codex-4.png" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-4.png?w=280&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=6286805e26d52b4dd18035ff749844b2 280w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-4.png?w=560&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=4521214c72eb33e3e72ef938dcdba6c3 560w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-4.png?w=840&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=dde26ad95f9e9f4e4fc2c177549f80a2 840w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-4.png?w=1100&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=f1aa9d9eff8a99dc698327c50ffcd182 1100w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-4.png?w=1650&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=0a6852ddce4f13b128bf993aa6f98b3c 1650w, https://mintcdn.com/aihubmix/7hQ6_nS3fMExXVXm/public/codex-4.png?w=2500&fit=max&auto=format&n=7hQ6_nS3fMExXVXm&q=85&s=2ee53a3c6437aa00350a8f900dfa5aed 2500w" />
 

@@ -1,13 +1,21 @@
 ---
 title: "Claude Code"
-description: "在 AIHubMix 中使用 Claude Code"
+description: "迄今为止最先进的代码助手，配合 CaMeL AI 智能缓存技术，让顶级模型也能跑出白菜价"
 ---
 
->  在 AIHubMix 中使用 Claude Code
+> 迄今为止最先进的代码助手，像与人对话一样用自然语言实现你的想法，无需任何学习成本。Codex 已上线，额度与 Claude Code 通用。
+
+<Info>
+  **分组说明：** default 分组适用于 Claude Code 等自带缓存管理的应用（更便宜）。smartcache 分组适用于 Cherry Studio / OpenClaw 等不自带缓存管理的应用。
+</Info>
+
+**支持的 IDE：** Visual Studio Code（包括 Cursor、Windsurf 等分支）、JetBrains IDEs（PyCharm、WebStorm、IntelliJ、GoLand）
+
+**系统要求：** macOS 10.15+ / Ubuntu 20.04+ / Debian 10+ / Windows | 4GB RAM | Node.js 18+
 
 ## 快速开始
 
-本指南将帮助您在几分钟内使用由 AIHubMix 提供的 Claude Code.
+本指南将帮助您在几分钟内使用由 CaMeL AI 提供的 Claude Code.
 
 ### 1. 安装 Claude Code
 
@@ -31,13 +39,13 @@ description: "在 AIHubMix 中使用 Claude Code"
 npm install -g @anthropic-ai/claude-code
 ```
 
-### 2. 配置 AIHubMix API
+### 2. 配置 CaMeL AI API
 
-要通过兼容 Anthropic API 的方式来接入 AIHubMix 的模型服务，需要配置以下环境变量。
+要通过兼容 Anthropic API 的方式来接入 CaMeL AI 的模型服务，需要配置以下环境变量。
 
-1. 将`ANTHROPIC_BASE_URL` 设置为`https://aihubmix.com`
-2. `ANTHROPIC_AUTH_TOKEN` 设置为从 [AIHubMix 平台](https://console.aihubmix.com/token) 获取的 API Key
-3. `ANTHROPIC_MODEL`：设置为[模型列表](https://aihubmix.com/models)中支持的模型。
+1. 将`ANTHROPIC_BASE_URL` 设置为`https://camel.kr777.top`
+2. `ANTHROPIC_AUTH_TOKEN` 设置为从 [CaMeL AI 平台](https://camel.kr777.top/token) 获取的 API Key
+3. `ANTHROPIC_MODEL`：设置为[模型列表](https://camel.kr777.top/models)中支持的模型。
 
 <Tabs>
   <Tab title="macOS">
@@ -51,16 +59,16 @@ npm install -g @anthropic-ai/claude-code
 
     <CodeGroup>
       ```shellscript Zsh theme={null}
-      # AIHUBMIX_API_KEY 替换为你从 AIHUBMIX 平台获取的 Key
-      echo 'export ANTHROPIC_BASE_URL="https://aihubmix.com"' >> ~/.zshrc
-      echo 'export ANTHROPIC_AUTH_TOKEN="AIHUBMIX_API_KEY"' >> ~/.zshrc
+      # CAMELAI_API_KEY 替换为你从 CaMeL AI 平台获取的 Key
+      echo 'export ANTHROPIC_BASE_URL="https://camel.kr777.top"' >> ~/.zshrc
+      echo 'export ANTHROPIC_AUTH_TOKEN="CAMELAI_API_KEY"' >> ~/.zshrc
       echo 'export ANTHROPIC_MODEL="claude-sonnet-4-5"' >> ~/.zshrc
       ```
 
       ```shellscript Bash theme={null}
-      # AIHUBMIX_API_KEY 替换为你从 AIHUBMIX 平台获取的 Key
-      echo 'export ANTHROPIC_BASE_URL="https://aihubmix.com"' >> ~/.bash_profile
-      echo 'export ANTHROPIC_AUTH_TOKEN="AIHUBMIX_API_KEY"' >> ~/.bash_profile
+      # CAMELAI_API_KEY 替换为你从 CaMeL AI 平台获取的 Key
+      echo 'export ANTHROPIC_BASE_URL="https://camel.kr777.top"' >> ~/.bash_profile
+      echo 'export ANTHROPIC_AUTH_TOKEN="CAMELAI_API_KEY"' >> ~/.bash_profile
       echo 'export ANTHROPIC_MODEL="claude-sonnet-4-5"' >> ~/.bash_profile
       ```
     </CodeGroup>
@@ -87,16 +95,16 @@ npm install -g @anthropic-ai/claude-code
   </Tab>
 
   <Tab title="Windows">
-    在 Windows 中，可以通过 CMD 或 PowerShell 将 AiHubMix 的 Base URL 和 [API Key](https://help.aliyun.com/zh/model-studio/get-api-key) 设置为环境变量。
+    在 Windows 中，可以通过 CMD 或 PowerShell 将 CaMeL AI 的 Base URL 和 [API Key](https://help.aliyun.com/zh/model-studio/get-api-key) 设置为环境变量。
 
     <Tabs>
       <Tab title="CMD">
         1. 在 CMD 中运行以下命令，设置环境变量。
 
         ```shellscript  theme={null}
-        REM AIHubMix API Key 替换 AIHUBMIX_API_KEY
-        setx ANTHROPIC_AUTH_TOKEN "AIHUBMIX_API_KEY"
-        setx ANTHROPIC_BASE_URL "https://aihubmix.com"
+        REM CaMeL AI API Key 替换 CAMELAI_API_KEY
+        setx ANTHROPIC_AUTH_TOKEN "CAMELAI_API_KEY"
+        setx ANTHROPIC_BASE_URL "https://camel.kr777.top"
         setx ANTHROPIC_MODEL "claude-sonnet-4-5"
         ```
 
@@ -113,9 +121,9 @@ npm install -g @anthropic-ai/claude-code
         1. 在 PowerShell 中运行以下命令，设置环境变量。
 
         ```shellscript  theme={null}
-        # AIHubMix API Key 替换 AIHUBMIX_API_KEY
-        [Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "AIHUBMIX_API_KEY", [EnvironmentVariableTarget]::User)
-        [Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://aihubmix.com", [EnvironmentVariableTarget]::User)
+        # CaMeL AI API Key 替换 CAMELAI_API_KEY
+        [Environment]::SetEnvironmentVariable("ANTHROPIC_AUTH_TOKEN", "CAMELAI_API_KEY", [EnvironmentVariableTarget]::User)
+        [Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://camel.kr777.top", [EnvironmentVariableTarget]::User)
         [Environment]::SetEnvironmentVariable("ANTHROPIC_MODEL", "claude-sonnet-4-5", [EnvironmentVariableTarget]::User)
         ```
 
@@ -205,7 +213,7 @@ export ANTHROPIC_DEFAULT_HAIKU_MODEL="claude-haiku-4-5"
 
 <img src="https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-1.jpg?fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=257b71ad7c6f876ac31147b7fd81f169" alt="Cc 1" data-og-width="2068" width="2068" data-og-height="1370" height="1370" data-path="public/cc-1.jpg" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-1.jpg?w=280&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=e6d30c4f0531f9e507e4fd87aa4697aa 280w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-1.jpg?w=560&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=3d5842bb2993eacf7a3c3e0e4c61d3da 560w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-1.jpg?w=840&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=0f93ac94bbaa2c6cc804dcd1b7275ff9 840w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-1.jpg?w=1100&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=d7255df054cf381d33d6fb7aebcece5f 1100w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-1.jpg?w=1650&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=b31ffc66af577c371d701ea145c3a155 1650w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-1.jpg?w=2500&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=d34e6077743ab7cf41c87666cc4a40c3 2500w" />
 
-2. 在预设列表中选择「AiHubMix」。
+2. 在预设列表中选择「CaMeL AI」。
 
 <img src="https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-2.jpg?fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=16dcb0697fdbf6438d4452ff8c39e485" alt="Cc 2" data-og-width="2072" width="2072" data-og-height="1376" height="1376" data-path="public/cc-2.jpg" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-2.jpg?w=280&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=d26ba5a2978f78bba7b6ab21d242b39a 280w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-2.jpg?w=560&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=de7a8db8ee048ff59b607ab4811b4fb0 560w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-2.jpg?w=840&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=789d70dde12abd7331bbbe4c1648252c 840w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-2.jpg?w=1100&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=1cfcc70338dbfbb526b3f23e3b69ec43 1100w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-2.jpg?w=1650&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=0aa51238e01754057b7705ade395c930 1650w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-2.jpg?w=2500&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=eafcd50ec37e810768dd77ada4b68844 2500w" />
 
@@ -217,7 +225,7 @@ export ANTHROPIC_DEFAULT_HAIKU_MODEL="claude-haiku-4-5"
 
 <img src="https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-4.jpg?fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=4fc79977772e8316dcef67759038b743" alt="Cc 4" data-og-width="2070" width="2070" data-og-height="1370" height="1370" data-path="public/cc-4.jpg" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-4.jpg?w=280&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=662f150fa2fe3ca58633ba7ecb352023 280w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-4.jpg?w=560&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=9df1983062004986f06589b4ba12828e 560w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-4.jpg?w=840&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=f84d8cf5e399d06957af889a5966186e 840w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-4.jpg?w=1100&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=5c4558f40f06abb3a5b154b60f971df5 1100w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-4.jpg?w=1650&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=0384b14be7687b8438d9824e99591c51 1650w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-4.jpg?w=2500&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=0e4017c264c3fb6fe58b85a8817642c4 2500w" />
 
-5. 返回首页，在供应商列表中选择「AiHubMix」，点击「启动」即可使用。
+5. 返回首页，在供应商列表中选择「CaMeL AI」，点击「启动」即可使用。
 
 <img src="https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-5.jpg?fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=4e765832e55e9737c91e2b40bf127c5d" alt="Cc 5" data-og-width="2068" width="2068" data-og-height="1366" height="1366" data-path="public/cc-5.jpg" data-optimize="true" data-opv="3" srcset="https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-5.jpg?w=280&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=b776611f71c4e4fe1f6697e33c85b70b 280w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-5.jpg?w=560&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=6d846545b29587dc4ef874e92e863ca2 560w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-5.jpg?w=840&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=d156a1ee8baa0296271ddeb480982647 840w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-5.jpg?w=1100&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=51ad9902225acb4f93b6d88883a55328 1100w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-5.jpg?w=1650&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=d2fb4bdeb2ca7c61f52b7767fb4387d5 1650w, https://mintcdn.com/aihubmix/l2uHw7hd14guDu0f/public/cc-5.jpg?w=2500&fit=max&auto=format&n=l2uHw7hd14guDu0f&q=85&s=8024b3ffd8e64bdf81da26601bb5a472 2500w" />
 
@@ -279,8 +287,8 @@ claude -v
 
 ## 更多资源
 
-* [Github](https://github.com/inferera/aihubmix/blob/main/packages/claude-code/README.md)
-* [npm 包](https://www.npmjs.com/package/@aihubmix/claude-code)
+* [Github](https://github.com/kuangren777/docs/blob/main/packages/claude-code/README.md)
+* [npm 包](https://www.npmjs.com/package/@camelai/claude-code)
 * [官方最佳实践](https://www.anthropic.com/engineering/claude-code-best-practices)
 * [官方配置指引](https://docs.anthropic.com/en/docs/claude-code/settings#settings-files)
 

@@ -10,12 +10,12 @@ description: "Gemini 漫游指南：关于本站的 Gemini 调用细节，在此
 对于 Gemini 系列，我们提供原生调用和 Openai 兼容这 2 种调用方式。\
 使用前运行 `pip install google-genai` 或 `pip install -U google-genai`，安装（更新）原生依赖。
 
-1️⃣ 对于原生调用，我们的 Gemini 调用支持 AI Studio 和 VertexAI 自动路由。转发方法主要是在内部传入 AIHubMix 密钥和请求链接。需要注意的是，这个链接和常规的 `base_url` 写法不同，请参考示例：
+1️⃣ 对于原生调用，我们的 Gemini 调用支持 AI Studio 和 VertexAI 自动路由。转发方法主要是在内部传入 CaMeL AI 密钥和请求链接。需要注意的是，这个链接和常规的 `base_url` 写法不同，请参考示例：
 
 ```py  theme={null}
 client = genai.Client(
-    api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-    http_options={"base_url": "https://aihubmix.com/gemini"},
+    api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+    http_options={"base_url": "https://camel.kr777.top/gemini"},
 )
 ```
 
@@ -23,7 +23,7 @@ client = genai.Client(
 
 ```py  theme={null}
 client = OpenAI(
-    api_key="sk-***", # 换成你在 AiHubMix 生成的密钥
+    api_key="sk-***", # 换成你在 CaMeL AI 生成的密钥
     base_url="https://api.kr777.top",
 )
 ```
@@ -56,11 +56,11 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
   from google import genai
   from google.genai import types
 
-  API_KEY = "<YOUR AIHUBMIX API KEY>"  
+  API_KEY = "<YOUR CAMELAI API KEY>"  
 
   client = genai.Client(
       api_key=API_KEY,
-      http_options={"base_url": "https://aihubmix.com/gemini"},  
+      http_options={"base_url": "https://camel.kr777.top/gemini"},  
   )
 
   prompt = (
@@ -97,11 +97,11 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
   from google import genai
   from PIL import Image
 
-  API_KEY = "<YOUR AIHUBMIX API KEY>"
+  API_KEY = "<YOUR CAMELAI API KEY>"
 
   client = genai.Client(
       api_key=API_KEY,
-      http_options={"base_url": "https://aihubmix.com/gemini"}
+      http_options={"base_url": "https://camel.kr777.top/gemini"}
   )
 
   prompt = (
@@ -130,7 +130,7 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
   from google.genai import types
   from PIL import Image
 
-  API_KEY = "<YOUR AIHUBMIX_API_KEY>"
+  API_KEY = "<YOUR CAMELAI_API_KEY>"
 
   prompt = "An office group photo of these people, they are making funny faces."
   aspect_ratio = "5:4"
@@ -138,7 +138,7 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
 
   client = genai.Client(
       api_key=API_KEY,
-      http_options={"base_url": "https://aihubmix.com/gemini"}
+      http_options={"base_url": "https://camel.kr777.top/gemini"}
   )
 
   response = client.models.generate_content(
@@ -172,7 +172,7 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
   from google import genai
   from google.genai import types
 
-  API_KEY = "<YOUR AIHUBMIX API KEY>"
+  API_KEY = "<YOUR CAMELAI API KEY>"
 
   prompt = (
       "Visualize the current weather forecast for the next 5 days in Shanghai "
@@ -183,7 +183,7 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
 
   client = genai.Client(
       api_key=API_KEY,
-      http_options={"base_url": "https://aihubmix.com/gemini"}
+      http_options={"base_url": "https://camel.kr777.top/gemini"}
   )
 
   response = client.models.generate_content(
@@ -223,8 +223,8 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
 
   def generate():
       client = genai.Client(
-          api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-          http_options={"base_url": "https://aihubmix.com/gemini"},
+          api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+          http_options={"base_url": "https://camel.kr777.top/gemini"},
       )
 
       model = "gemini-2.0-flash"
@@ -252,8 +252,8 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
 
   def generate():
       client = genai.Client(
-          api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-          http_options={"base_url": "https://aihubmix.com/gemini"},
+          api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+          http_options={"base_url": "https://camel.kr777.top/gemini"},
       )
 
       model = "gemini-2.0-flash"
@@ -286,8 +286,8 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
 
   def generate():
       client = genai.Client(
-          api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-          http_options={"base_url": "https://aihubmix.com/gemini"},
+          api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+          http_options={"base_url": "https://camel.kr777.top/gemini"},
       )
 
       model = "gemini-2.5-flash-preview-04-17" #gemini-2.5-pro-preview-03-25、gemini-2.5-flash-preview-04-17
@@ -323,8 +323,8 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
 
   def generate():
       client = genai.Client(
-          api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-          http_options={"base_url": "https://aihubmix.com/gemini"},
+          api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+          http_options={"base_url": "https://camel.kr777.top/gemini"},
       )
 
       model = "gemini-2.5-pro-preview-03-25"
@@ -357,8 +357,8 @@ Gemini 3 Pro Image Preview（Nano Banana Pro 预览版）专为专业素材资�
 
   def generate():
       client = genai.Client(
-          api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-          http_options={"base_url": "https://aihubmix.com/gemini"},
+          api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+          http_options={"base_url": "https://camel.kr777.top/gemini"},
       )
 
       model = "gemini-2.5-pro-preview-05-06"
@@ -421,7 +421,7 @@ Openai 兼容方式调用参考如下：
   from openai import OpenAI
 
   client = OpenAI(
-      api_key="sk-***", # 换成你在 AiHubMix 生成的密钥
+      api_key="sk-***", # 换成你在 CaMeL AI 生成的密钥
       base_url="https://api.kr777.top",
   )
 
@@ -442,7 +442,7 @@ Openai 兼容方式调用参考如下：
   from openai import OpenAI
 
   client = OpenAI(
-      api_key="sk-***", # 换成你在 AiHubMix 生成的密钥
+      api_key="sk-***", # 换成你在 CaMeL AI 生成的密钥
       base_url="https://api.kr777.top",
   )
 
@@ -530,8 +530,8 @@ Openai 兼容方式调用参考如下：
       file_bytes = f.read()
 
   client = genai.Client(
-      api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-      http_options={"base_url": "https://aihubmix.com/gemini"}
+      api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+      http_options={"base_url": "https://camel.kr777.top/gemini"}
   )
 
   response = client.models.generate_content(
@@ -574,8 +574,8 @@ Openai 兼容方式调用参考如下：
       file_bytes = f.read()
 
   client = genai.Client(
-      api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-      http_options={"base_url": "https://aihubmix.com/gemini"}
+      api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+      http_options={"base_url": "https://camel.kr777.top/gemini"}
   )
 
   response = client.models.generate_content(
@@ -608,8 +608,8 @@ Openai 兼容方式调用参考如下：
       file_bytes = f.read()
 
   client = genai.Client(
-      api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-      http_options={"base_url": "https://aihubmix.com/gemini"}
+      api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+      http_options={"base_url": "https://camel.kr777.top/gemini"}
   )
 
   response = client.models.generate_content(
@@ -637,8 +637,8 @@ Openai 兼容方式调用参考如下：
   from google.genai import types
 
   client = genai.Client(
-      api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-      http_options={"base_url": "https://aihubmix.com/gemini"}
+      api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+      http_options={"base_url": "https://camel.kr777.top/gemini"}
   )
 
   response = client.models.generate_content(
@@ -678,7 +678,7 @@ Gemini 可以同时处理各种类型的输入数据，包括文本、图片和�
 
   client = genai.Client(
       api_key="sk-****",   
-      http_options={"base_url": "https://aihubmix.com/gemini"},
+      http_options={"base_url": "https://camel.kr777.top/gemini"},
   )
 
   myfile = client.files.upload(file="path/to/sample.mp3")
@@ -695,7 +695,7 @@ Gemini 可以同时处理各种类型的输入数据，包括文本、图片和�
 
   client = genai.Client(
       api_key="sk-****",   
-      http_options={"base_url": "https://aihubmix.com/gemini"},
+      http_options={"base_url": "https://camel.kr777.top/gemini"},
   )
 
   myfile = client.files.upload(file='path/to/sample.mp3')
@@ -728,8 +728,8 @@ with open(file_path, "rb") as f:
     file_bytes = f.read()
 
 client = genai.Client(
-    api_key="sk-***", # 🔑 换成你在 AiHubMix 生成的密钥
-    http_options={"base_url": "https://aihubmix.com/gemini"}
+    api_key="sk-***", # 🔑 换成你在 CaMeL AI 生成的密钥
+    http_options={"base_url": "https://camel.kr777.top/gemini"}
 )
 
 response = client.models.generate_content(
@@ -790,8 +790,8 @@ Gemini 在原生 API 下默认启用了**隐式上下文缓存**，无需开发�
 from google import genai
 
 client = genai.Client(
-    http_options={"base_url": "https://aihubmix.com/gemini"},
-    api_key="sk-***", # 换成你在 AiHubMix 生成的密钥
+    http_options={"base_url": "https://camel.kr777.top/gemini"},
+    api_key="sk-***", # 换成你在 CaMeL AI 生成的密钥
 )
 
 prompt = """
@@ -857,7 +857,7 @@ generate_content_sync()
 
   # Configure the client
   client = OpenAI(
-      api_key="sk-***", # 换成你在 AiHubMix 生成的密钥
+      api_key="sk-***", # 换成你在 CaMeL AI 生成的密钥
       base_url="https://api.kr777.top",
   )
 
@@ -868,7 +868,7 @@ generate_content_sync()
           {"role": "user", "content": "Schedule a meeting with Bob and Alice for 03/14/2025 at 10:00 AM about the Q3 planning."}
       ],
       tools=[{"type": "function", "function": schedule_meeting_function}],
-      tool_choice="auto" ## 📍 此处追加了 Aihubmix 兼容，更稳定的请求方式
+      tool_choice="auto" ## 📍 此处追加了 CaMeL AI 兼容，更稳定的请求方式
   )
 
   # Check for a function call
@@ -919,8 +919,8 @@ CompletionUsage(completion_tokens=28, prompt_tokens=111, total_tokens=139, compl
 
   def generate():
       client = genai.Client(
-          api_key="sk-***", # 换成你在 AiHubMix 生成的密钥
-          http_options={"base_url": "https://aihubmix.com/gemini"},
+          api_key="sk-***", # 换成你在 CaMeL AI 生成的密钥
+          http_options={"base_url": "https://camel.kr777.top/gemini"},
       )
 
       model = "gemini-2.5-pro-preview-03-25"
@@ -959,7 +959,7 @@ CompletionUsage(completion_tokens=28, prompt_tokens=111, total_tokens=139, compl
   from openai import OpenAI
 
   client = OpenAI(
-      api_key="sk-***", # 换成你在 AiHubMix 生成的密钥
+      api_key="sk-***", # 换成你在 CaMeL AI 生成的密钥
       base_url="https://api.kr777.top",
   )
 

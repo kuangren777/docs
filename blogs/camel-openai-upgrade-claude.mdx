@@ -1,5 +1,5 @@
 ---
-title: "AihubMix OpenAI 兼容接口升级 —— 深度支持 Claude 思考、缓存与 Beta 功能"
+title: "CaMeL AI OpenAI 兼容接口升级 —— 深度支持 Claude 思考、缓存与 Beta 功能"
 description: "我们升级了 OpenAI 兼容接口，针对 Claude 系列模型进行了更深入的适配优化。你可以更精细、更便捷地控制思考（thinking）与缓存（caching）——特别是多轮对话中的交错思考，我们做了更人性化的处理，无需额外传参即可无痛接入。同时支持开启 Anthropic 提供的 beta 功能。"
 ---
 
@@ -93,7 +93,7 @@ messages = [
 ]
 ```
 
-AihubMix 检测到请求中包含历史思考信息时，会**自动开启交错思考（Interleaved Thinking）**，让模型在收到工具调用结果后继续深度推理，无需额外传参。
+CaMeL AI 检测到请求中包含历史思考信息时，会**自动开启交错思考（Interleaved Thinking）**，让模型在收到工具调用结果后继续深度推理，无需额外传参。
 
 ### 1.5 完整示例
 
@@ -108,7 +108,7 @@ from openai import OpenAI
 
 client = OpenAI(
     base_url="https://api.kr777.top",
-    api_key=os.environ.get("AIHUBMIX_API_KEY", "sk-***"),
+    api_key=os.environ.get("CAMELAI_API_KEY", "sk-***"),
 )
 
 # ── Tool definition ───────────────────────────────────────────
@@ -199,7 +199,7 @@ from openai import OpenAI
 
 client = OpenAI(
     base_url="https://api.kr777.top",
-    api_key=os.environ.get("AIHUBMIX_API_KEY", "sk-***"),
+    api_key=os.environ.get("CAMELAI_API_KEY", "sk-***"),
 )
 
 # ── Tool definition & mock execution ─────────────────────────
@@ -554,7 +554,7 @@ budget_tokens = max(min(max_tokens × effort_ratio, 128000), 1024)
 
 ## 3. 请求头传递 anthropic-beta
 
-你可以通过 HTTP Header `anthropic-beta` 来开启 Claude 模型的 beta 特性，AihubMix 会将该 header 透传给 Anthropic API。
+你可以通过 HTTP Header `anthropic-beta` 来开启 Claude 模型的 beta 特性，CaMeL AI 会将该 header 透传给 Anthropic API。
 
 ### 用法
 

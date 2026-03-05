@@ -1,9 +1,9 @@
 ---
 title: "重排序"
-description: "AiHubMix 提供兼容 OpenAI 标准的高效重排序方案"
+description: "CaMeL AI 提供兼容 OpenAI 标准的高效重排序方案"
 ---
 
-> AiHubMix 提供兼容 OpenAI 标准的高效重排序方案
+> CaMeL AI 提供兼容 OpenAI 标准的高效重排序方案
 
 ## 调用指引
 
@@ -16,7 +16,7 @@ description: "AiHubMix 提供兼容 OpenAI 标准的高效重排序方案"
 
   headers = {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer <AIHUBMIX_API_KEY>' # 换成你在 AiHubMix 生成的密钥
+      'Authorization': 'Bearer <CAMELAI_API_KEY>' # 换成你在 CaMeL AI 生成的密钥
   }
 
   data = {
@@ -46,7 +46,7 @@ description: "AiHubMix 提供兼容 OpenAI 标准的高效重排序方案"
   ```cURL curl theme={null}
   curl https://api.kr777.top/rerank \\
   -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer <AIHUBMIX_API_KEY>" \\
+  -H "Authorization: Bearer <CAMELAI_API_KEY>" \\
   -d '{
     "model": "jina-reranker-v3",
     "query": "Organic skincare products for sensitive skin",

@@ -98,7 +98,7 @@ description: "使用 Whisper 模型将音频文件转换为文本，支持转录
 <CodeGroup>
   ```shell Curl 转录 theme={null}
   curl https://api.kr777.top/audio/transcriptions \
-    -H "Authorization: Bearer $AIHUBMIX_API_KEY" \
+    -H "Authorization: Bearer $CAMELAI_API_KEY" \
     -H "Content-Type: multipart/form-data" \
     -F file="@/path/to/file/audio.mp3" \
     -F model="whisper-large-v3" \
@@ -108,7 +108,7 @@ description: "使用 Whisper 模型将音频文件转换为文本，支持转录
 
   ```shell Curl 翻译 theme={null}
   curl https://api.kr777.top/audio/translations \
-    -H "Authorization: Bearer $AIHUBMIX_API_KEY" \
+    -H "Authorization: Bearer $CAMELAI_API_KEY" \
     -H "Content-Type: multipart/form-data" \
     -F file="@/path/to/file/audio.mp3" \
     -F model="whisper-large-v3" \
@@ -122,7 +122,7 @@ description: "使用 Whisper 模型将音频文件转换为文本，支持转录
   import os
 
   client = OpenAI(
-    api_key="sk-***", # 替换为你的 AiHubMix API 密钥
+    api_key="sk-***", # 替换为你的 CaMeL AI API 密钥
     base_url="https://api.kr777.top"
   )
 
@@ -147,7 +147,7 @@ description: "使用 Whisper 模型将音频文件转换为文本，支持转录
   import os
 
   client = OpenAI(
-    api_key="sk-***", # 替换为你的 AiHubMix API 密钥
+    api_key="sk-***", # 替换为你的 CaMeL AI API 密钥
     base_url="https://api.kr777.top"
   )
 
@@ -171,7 +171,7 @@ description: "使用 Whisper 模型将音频文件转换为文本，支持转录
   import os
 
   client = OpenAI(
-    api_key="sk-***", # 替换为你的 AiHubMix API 密钥
+    api_key="sk-***", # 替换为你的 CaMeL AI API 密钥
     base_url="https://api.kr777.top"
   )
 
@@ -198,7 +198,7 @@ description: "使用 Whisper 模型将音频文件转换为文本，支持转录
   import os
 
   client = OpenAI(
-    api_key="sk-***", # 替换为你的 AiHubMix API 密钥
+    api_key="sk-***", # 替换为你的 CaMeL AI API 密钥
     base_url="https://api.kr777.top"
   )
 
