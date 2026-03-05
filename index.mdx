@@ -1,97 +1,94 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "产品介绍"
+description: "AIHubMix 由美国 AIHubMix, LLC 主体运营，是获得微软 Azure、AWS、GCP 、阿里云、百度云等各大模型推理云厂商官方授权的合规模型聚合平台。所有服务全部集群化部署云美国谷歌云上，长期为众多知名应用提供高并发、稳定、可信赖的 AI 模型 API 服务，深受开发者和企业信任。"
 ---
 
-## Setting up
+> AIHubMix 由美国 AIHubMix, LLC 主体运营，是获得微软 Azure、AWS、GCP 、阿里云、百度云等各大模型推理云厂商官方授权的合规模型聚合平台。所有服务全部集群化部署云美国谷歌云上，长期为众多知名应用提供高并发、稳定、可信赖的 AI 模型 API 服务，深受开发者和企业信任。
 
-Get your documentation site up and running in minutes.
+## 概述
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
+* **统一接口，极简迁移**：所有模型统一支持 OpenAI chat 兼容接口，代码零改动即可平滑切换。
+* **多接口兼容**：支持 OpenAI、Google Gemini、Anthropic多种兼容格式接口
+* **一站式模型能力**：文本、图片/视频生成、向量嵌入、Rerank、TTS、STT、OCR 等主流模型全覆盖，满足多场景需求。
+* **灵活计费，按量付费**：无会员、无包月，计费规则完全跟对应厂商对齐一致。
+
+<Card title="快速开始" icon="rocket" color="#000" href="/quick-start">
+  一个接口把所有 AI 模型统一接入你的应用
 </Card>
 
-## Make it yours
+## 文档结构
 
-Design a docs site that looks great and empowers your users.
+### 常用 API 参考
 
 <Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+  <Card title="图片生成" icon="image" color="#000" href="/api/Image-Gen">
+    图片生成 API
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
-  </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+
+  <Card title="视频生成" icon="video" iconType="regular" color="#000" href="/api/Video-Gen">
+    视频生成 API
   </Card>
 </Columns>
 
-## Create beautiful pages
-
-Everything you need to create world-class documentation.
+### 集成与扩展
 
 <Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
+  <Card title="OpenAI 兼容格式" icon="link" color="#000">
+    通过 OpenAI 兼容接口调用所有的模型
   </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
+
+  <Card title="Claude 兼容（Beta）" icon="brain" color="#000">
+    通过 Anthropic API 调用所有的模型
   </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
+
+  <Card title="Gemini 原生接口" icon="Google" color="#000" href="/api/Gemini-Guides">
+    对于 Gemini 模型提供原生调用方式
   </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
+
+  <Card title="AI SDK" icon="code" color="#000" href="/api/AISDK">
+    使用 AI SDK 接入大量模型
   </Card>
 </Columns>
 
-## Need inspiration?
+### 指南与最佳实践
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<Columns cols={2}>
+  <Card title="第三方接入指南" icon="book" color="#000" href="/api/Auth">
+    在三方应用中集成 AIHubMix API
+  </Card>
+
+  <Card title="FAQs" icon="search" color="#000" href="/FAQs/Faq">
+    高频问题指南
+  </Card>
+</Columns>
+
+## 常用功能与场景
+
+* **开发工具：** 在 [Claude Code](/api/Claude-Code)、[OpenCode](/api/Opencode)、[Cline](/api/Cline)、[Gemini Cli ](/api/Cline)等开发工具中使用
+* **应用软件：** 在 [Lobe-chat](/clients/Lobe-Chat)、[OpenAI Translator](/clients/OpenAI-Translator)、[Cursor](/clients/Cursor)、[Cherry Studio](/clients/Cherry-Studio)、[ChatBox](/clients/ChatBox) 等软件中使用
+
+## 快速导航
+
+<AccordionGroup>
+  <Accordion title="入门">
+    * [概述](/)- 本页
+    * [快速入门](/quick-start)- 进行首次 API 调用
+  </Accordion>
+
+  <Accordion title="开发工具集成">
+    * [在 Claude Code 中使用](/api/Claude-Code)
+    * [在 Codex 中使用](/api/Codex-CLI)
+    * [在 OpenCode 中使用](/api/Opencode)
+    * [在 Cline 中使用](/api/Cline)
+  </Accordion>
+
+  <Accordion title="常见问题">
+    * [FAQs](/FAQs/Faq)
+  </Accordion>
+
+  <Accordion title="联系我们">
+    * 商务合作：[business@aihubmix.com](mailto:business@aihubmix.com)
+    * 意见反馈：[feedback@aihubmix.com](mailto:feedback@aihubmix.com)
+    * [人工客服](/FAQs/Human-Customer-Support)
+  </Accordion>
+</AccordionGroup>

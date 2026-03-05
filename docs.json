@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "AIHubMix",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -11,58 +11,173 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "指南",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "入门",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "quick-start"
             ]
           },
           {
-            "group": "Customization",
+            "group": "客户端集成",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "clients/Cherry-Studio",
+              "clients/Lobe-Chat",
+              "clients/ChatBox",
+              "clients/ChatGPT-Next-Web",
+              "clients/Cursor",
+              "clients/Cline",
+              "clients/Open-WebUI",
+              "clients/AnythingLLM",
+              "clients/Dify",
+              "clients/LibreChat",
+              "clients/Obsidian",
+              "clients/N8N",
+              "clients/LangChain",
+              "clients/ChatAll",
+              "clients/ChatHub",
+              "clients/Chatx",
+              "clients/GCMP",
+              "clients/Gptme",
+              "clients/GPT-Academic",
+              "clients/Avante.nvim",
+              "clients/AHM-mcp",
+              "clients/FeelFish",
+              "clients/On-CS"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "翻译工具",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "clients/OpenAI-Translator",
+              "clients/Bob",
+              "clients/Immersive-Translate",
+              "clients/Oulu",
+              "clients/Pot-App",
+              "clients/Utools-ChatGPT"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Zotero",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "clients/Zotero"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API 参考",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "开发工具",
             "pages": [
-              "api-reference/introduction"
+              "api/Claude-Code",
+              "api/Codex-CLI",
+              "api/Opencode",
+              "api/Cline",
+              "api/Gemini-Cli",
+              "api/Qwen-code",
+              "api/OpenClaw"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "模型接口",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api/Aihubmix-Integration",
+              "api/Anthropic-Compatible",
+              "api/Claude-Native",
+              "api/Claude-Cache",
+              "api/Gemini-Guides",
+              "api/Multimodal-Interaction-with-Gemini",
+              "api/Qwen",
+              "api/AISDK",
+              "api/Responses-API",
+              "api/Models-API",
+              "api/Capability-Suffix"
+            ]
+          },
+          {
+            "group": "多模态",
+            "pages": [
+              "api/Image-Gen",
+              "api/GPT-Image-1",
+              "api/IdeogramAI",
+              "api/Video-Gen",
+              "api/vision",
+              "api/TTS",
+              "api/STT"
+            ]
+          },
+          {
+            "group": "高级功能",
+            "pages": [
+              "api/LLM-Search",
+              "api/EBD",
+              "api/Rerank",
+              "api/FIM",
+              "api/moderation",
+              "api/Crush",
+              "api/Jina-AI"
+            ]
+          },
+          {
+            "group": "接入与认证",
+            "pages": [
+              "api/Auth",
+              "api/Third-PartyIntegrationTechnicalGuide",
+              "api/App-code",
+              "api/Data-Pravicy",
+              "api/Cli",
+              "api/Status"
+            ]
+          },
+          {
+            "group": "CLI 接口",
+            "pages": [
+              "api/cli-endpoints/get-self",
+              "api/cli-endpoints/available-models",
+              "api/cli-endpoints/list-models",
+              "api/cli-endpoints/create-key",
+              "api/cli-endpoints/get-key",
+              "api/cli-endpoints/list-keys",
+              "api/cli-endpoints/search-keys",
+              "api/cli-endpoints/update-key",
+              "api/cli-endpoints/delete-key",
+              "api/cli-endpoints/get-user-token"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "更多",
+        "groups": [
+          {
+            "group": "博客",
+            "pages": [
+              "blogs/aihubmix-openai-upgrade-claude"
+            ]
+          },
+          {
+            "group": "常见问题",
+            "pages": [
+              "FAQs/Faq",
+              "FAQs/HTTP-Codes",
+              "FAQs/Human-Customer-Support"
+            ]
+          },
+          {
+            "group": "更新日志",
+            "pages": [
+              "update/News"
+            ]
+          },
+          {
+            "group": "法律条款",
+            "pages": [
+              "terms-and-privacy/Terms",
+              "terms-and-privacy/Privacy"
             ]
           }
         ]
@@ -71,14 +186,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "模型广场",
+          "href": "https://aihubmix.com/models",
+          "icon": "cube"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "获取 API Key",
+          "href": "https://aihubmix.com/token",
+          "icon": "key"
         }
       ]
     }
@@ -90,33 +205,19 @@
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "label": "控制台",
+        "href": "https://aihubmix.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "获取 API Key",
+      "href": "https://aihubmix.com/token"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/aihubmix"
     }
   }
 }
